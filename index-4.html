@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website educativo sobre a prevenção da violência física e psicológica entre alunos no ambiente escolar.">
+  <title>Escola sem Violência | Respeito e Segurança</title>
+  <style>
+    :root {
+      --navy: #17324d;
+      --blue: #246b9b;
+      --pale: #eaf4fa;
+      --gold: #f2bd55;
+      --ink: #243342;
+      --muted: #5c6b78;
+      --white: #fff;
+      --bg: #f6f9fc;
+      --line: #dce6ee;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.65;
+    }
+    header {
+      background: linear-gradient(135deg, #17324d, #246b9b);
+      color: var(--white);
+      padding: 22px 6%;
+    }
+    .top {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .brand { font-weight: 800; letter-spacing: .3px; font-size: 1.15rem; }
+    nav { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+    nav a { color: white; text-decoration: none; font-size: .94rem; }
+    nav a:hover { text-decoration: underline; }
+    .hero {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 6% 76px;
+      color: white;
+    }
+    .hero small {
+      display: inline-block;
+      background: rgba(255,255,255,.14);
+      padding: 6px 12px;
+      border-radius: 30px;
+      letter-spacing: .5px;
+    }
+    h1 { font-size: clamp(2.1rem, 5vw, 3.8rem); line-height: 1.1; margin: 18px 0; max-width: 780px; }
+    .hero p { max-width: 700px; font-size: 1.12rem; color: #edf6fc; }
+    .hero .button {
+      display: inline-block; margin-top: 15px; padding: 12px 20px;
+      background: var(--gold); color: #253342; border-radius: 8px;
+      text-decoration: none; font-weight: 700;
+    }
+    main { max-width: 1100px; margin: 0 auto; padding: 28px 6% 65px; }
+    section { scroll-margin-top: 22px; margin: 28px 0; }
+    h2 { color: var(--navy); font-size: 1.8rem; margin-bottom: 12px; }
+    h3 { color: var(--blue); margin-bottom: 7px; }
+    .intro {
+      background: white; border-left: 5px solid var(--gold);
+      padding: 22px 24px; border-radius: 10px; box-shadow: 0 5px 18px rgba(23,50,77,.06);
+    }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .card {
+      background: white; border: 1px solid var(--line); border-radius: 12px;
+      padding: 20px; box-shadow: 0 5px 16px rgba(23,50,77,.04);
+    }
+    .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+    ul { padding-left: 22px; }
+    li { margin: 6px 0; }
+    .callout {
+      background: var(--pale); border-radius: 12px; padding: 22px;
+      border: 1px solid #d3e8f5;
+    }
+    .steps { counter-reset: step; list-style: none; padding: 0; }
+    .steps li { counter-increment: step; display: flex; gap: 12px; margin: 12px 0; }
+    .steps li::before {
+      content: counter(step); flex: 0 0 30px; height: 30px;
+      display: grid; place-items: center; background: var(--blue);
+      color: white; border-radius: 50%; font-weight: bold;
+    }
+    .quote {
+      text-align: center; font-size: 1.35rem; font-weight: 700;
+      color: var(--navy); padding: 28px 18px;
+      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    }
+    footer { background: var(--navy); color: white; text-align: center; padding: 28px 6%; }
+    footer p { margin: 5px; }
+    .muted { color: var(--muted); }
+    @media (max-width: 680px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 48px; }
+      nav { gap: 8px 13px; }
+      nav a { font-size: .88rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top">
+      <div class="brand">ESCOLA SEM VIOLÊNCIA</div>
+      <nav aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#introducao">Introdução</a>
+        <a href="#tipos">Tipos</a>
+        <a href="#causas">Causas</a>
+        <a href="#consequencias">Consequências</a>
+        <a href="#solucoes">Soluções</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero" id="inicio">
+    <small>PROJECTO EDUCATIVO ESCOLAR</small>
+    <h1>Violência física e mental entre alunos</h1>
+    <p>Conhecer o problema é o primeiro passo para o prevenir. Promovemos uma escola onde cada aluno possa aprender com segurança, dignidade e respeito.</p>
+    <a class="button" href="#introducao">Conhecer o tema</a>
+  </div>
+
+  <main>
+    <section id="introducao">
+      <h2>Introdução</h2>
+      <div class="intro">
+        <p>A violência física e mental entre alunos é um problema que prejudica a convivência escolar e o processo de ensino e aprendizagem. Pode manifestar-se através de agressões, insultos, ameaças, humilhações, intimidação e exclusão. A escola deve ser um espaço seguro, onde todos tenham oportunidade de aprender e desenvolver as suas capacidades sem medo.</p>
+      </div>
+    </section>
+
+    <section id="objectivos">
+      <h2>Objectivos</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Objectivo geral</h3>
+          <p>Analisar a violência física e psicológica entre alunos, identificando as suas causas, consequências e possíveis soluções.</p>
+        </article>
+        <article class="card">
+          <h3>Objectivos específicos</h3>
+          <ul>
+            <li>Identificar os tipos de violência escolar.</li>
+            <li>Conhecer as principais causas e consequências.</li>
+            <li>Sensibilizar os alunos para o respeito mútuo.</li>
+            <li>Apresentar medidas de prevenção.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="tipos">
+      <h2>O que é a violência escolar?</h2>
+      <p>É um conjunto de comportamentos que prejudicam a integridade física ou o bem-estar emocional de um estudante. Pode acontecer na sala de aulas, no recreio, no caminho para a escola ou através das redes sociais.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>Violência física</h3>
+          <p>É a agressão que atinge o corpo de outra pessoa.</p>
+          <ul>
+            <li>Bater, empurrar ou dar pontapés.</li>
+            <li>Puxar os cabelos ou causar ferimentos.</li>
+            <li>Atirar objectos contra colegas.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Violência mental ou psicológica</h3>
+          <p>É o comportamento que provoca sofrimento emocional, medo ou humilhação.</p>
+          <ul>
+            <li>Insultar, ameaçar ou humilhar.</li>
+            <li>Espalhar rumores e mentiras.</li>
+            <li>Excluir ou intimidar repetidamente um colega.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="causas">
+      <h2>Principais causas</h2>
+      <div class="card">
+        <ul>
+          <li>Falta de respeito e de diálogo.</li>
+          <li>Dificuldade em controlar a raiva e resolver conflitos.</li>
+          <li>Discriminação e preconceito.</li>
+          <li>Influência negativa de colegas.</li>
+          <li>Problemas familiares ou sociais.</li>
+          <li>Falta de acompanhamento e de orientação adequada.</li>
+        </ul>
+        <p class="muted">As causas variam de situação para situação. Nenhuma delas justifica agredir ou humilhar outra pessoa.</p>
+      </div>
+    </section>
+
+    <section id="consequencias">
+      <h2>Consequências da violência</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Na saúde e no bem-estar</h3>
+          <ul>
+            <li>Ferimentos e dores.</li>
+            <li>Medo, tristeza e ansiedade.</li>
+            <li>Perda de confiança e de autoestima.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Na aprendizagem</h3>
+          <ul>
+            <li>Dificuldade de concentração.</li>
+            <li>Faltas e menor participação nas aulas.</li>
+            <li>Baixo aproveitamento escolar.</li>
+            <li>Risco de abandono escolar.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="solucoes">
+      <h2>Soluções e medidas de prevenção</h2>
+      <div class="callout">
+        <ol class="steps">
+          <li>Promover o respeito, a amizade e a inclusão entre todos.</li>
+          <li>Resolver desentendimentos através do diálogo e sem agressões.</li>
+          <li>Realizar palestras e campanhas de sensibilização na escola.</li>
+          <li>Comunicar situações de violência a um professor ou à direcção.</li>
+          <li>Dar apoio aos alunos afectados e encaminhá-los para ajuda adequada.</li>
+          <li>Envolver os encarregados de educação na prevenção.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="recomendacoes">
+      <h2>Recomendações</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Aos alunos</h3>
+          <ul>
+            <li>Respeitar as diferenças.</li>
+            <li>Não participar nem incentivar agressões.</li>
+            <li>Pedir ajuda a um adulto de confiança.</li>
+            <li>Apoiar colegas que estejam a ser maltratados, sem se colocar em perigo.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>À escola e às famílias</h3>
+          <ul>
+            <li>Escutar os alunos sem os julgar.</li>
+            <li>Estabelecer regras claras de convivência.</li>
+            <li>Investigar as situações com cuidado e proteger a privacidade.</li>
+            <li>Trabalhar em conjunto para manter um ambiente seguro.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="conclusao">
+      <h2>Conclusão</h2>
+      <p>A violência física e psicológica entre alunos prejudica a educação, a saúde emocional e a convivência escolar. O seu combate é uma responsabilidade de todos: alunos, professores, famílias e direcção da escola. Com respeito, diálogo e cooperação, podemos construir um ambiente onde todos aprendam com segurança e dignidade.</p>
+    </section>
+
+    <section id="referencias">
+      <h2>Referências para consulta</h2>
+      <div class="card">
+        <ul>
+          <li><a href="https://www.unicef.org/" target="_blank" rel="noopener">UNICEF</a> — materiais sobre protecção e bem-estar das crianças.</li>
+          <li><a href="https://www.unesco.org/" target="_blank" rel="noopener">UNESCO</a> — recursos sobre educação segura e inclusiva.</li>
+          <li><a href="https://www.who.int/" target="_blank" rel="noopener">Organização Mundial da Saúde (OMS)</a> — informações sobre violência e saúde.</li>
+        </ul>
+        <p class="muted">Acrescentem também os livros, documentos escolares e outras fontes que o grupo consultar directamente.</p>
+      </div>
+    </section>
+
+    <div class="quote">“Respeitar é educar. A violência não faz parte da aprendizagem.”</div>
+  </main>
+
+  <footer>
+    <p><strong>Juntos por uma escola segura e livre de violência.</strong></p>
+    <p>Website educativo desenvolvido para um trabalho escolar.</p>
+  </footer>
+</body>
+</html>
